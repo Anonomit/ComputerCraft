@@ -7,8 +7,8 @@ local function main( ... )
 end --local function main( ... )
 
 -- Run
-local args = { ... }
-local _, err = pcall( function() main( unpack( args ) ) end )
+local tArgs = { ... }
+local _, err = pcall( function() main( unpack( tArgs ) ) end )
 if err then
 	-- Make a nice error handling screen here...
 	term.setBackgroundColor( colors.black )
