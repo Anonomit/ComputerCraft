@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[local function writeCenter( text, nY )
+	if type( text ) == "table" then
+		for _, v in pairs( text ) do
+			writeCenter( v )
+		end --for _, v in pairs( text )
+	else --if type( text ) == "table"
+		local x, y = term.getCursorPos()
+		local w, h = term.getSize()
+		term.setCursorPos( w/2 - text:len()/2 + ( #text % 2 == 0 and 1 or 0 ), nY or y )
+		print( text )
+	end --if type( text ) == "table"
+end --local function writeCenter( text, nY )]]></content>
+	<tabTrigger>function writeCenter</tabTrigger>
+	<scope>source.computercraft</scope>
+	<description>Center Print Function</description>
+</snippet>
