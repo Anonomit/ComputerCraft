@@ -1,21 +1,19 @@
 <snippet>
 	<content><![CDATA[
--- Program functions...
 
 local function main( ... )
-	-- Code here...
+	
 end --local function main( ... )
 
--- Run
+
 local tArgs = { ... }
 local _, err = pcall( function() main( unpack( tArgs ) ) end )
 if err then
-	-- Make a nice error handling screen here...
 	term.setBackgroundColor( colors.black )
 	term.setTextColor( colors.white )
-	print( " An Error Has Occured!\n\n")
-	print( " " .. tostring( err ) .. "\n\n")
-	print( " Press any key to exit..." )
+	print( "Error!")
+	print( tostring( err ) )
+	print( "Press any key to exit..." )
 	os.pullEvent( "key" )
 end --if err
 ]]></content>
