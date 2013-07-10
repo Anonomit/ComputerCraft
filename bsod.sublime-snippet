@@ -1,7 +1,6 @@
 <snippet>
 	<content><![CDATA[
-
-local function main( ... )
+function main( ... )
 	
 end --local function main( ... )
 
