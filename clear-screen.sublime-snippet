@@ -1,11 +1,11 @@
 <snippet>
 	<content><![CDATA[
 if term.isColor and term.isColor() then
-	term.setBackgroundColor( ${1:colors.black} )
-	term.setTextColor( ${2:colors.white} )
-end --if term.isColor and term.isColor()
+	term.setBackgroundColor(${1:colors.black})
+	term.setTextColor(${2:colors.white})
+end
 term.clear()
-term.setCursorPos( ${3:1}, ${4:1} )]]></content>
+term.setCursorPos(${3:1}, ${4:1})]]></content>
 	<tabTrigger>term</tabTrigger>
 	<scope>source.computercraft</scope>
 	<description>Clear the Screen</description>

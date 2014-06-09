@@ -2,21 +2,21 @@
 	<content><![CDATA[
 function main( ... )
 	
-end --local function main( ... )
+end
 
 
-local tArgs = { ... }
-local _, err = pcall( function() main( unpack( tArgs ) ) end )
+local tArgs = {...}
+local _, err = pcall(function() main( unpack( tArgs ) ) end)
 if err then
-	term.setBackgroundColor( colors.black )
-	term.setTextColor( colors.red )
-	print( "Error!" )
-	print( tostring( err ) )
-	term.setTextColor( colors.yellow )
-	print( "Press any key to exit..." )
-	os.pullEvent( "key" )
-	term.setTextColor( colors.white )
-end --if err
+	term.setBackgroundColor(colors.black)
+	term.setTextColor(colors.red)
+	print("Error!")
+	print(tostring(err))
+	term.setTextColor(colors.yellow)
+	print("Press any key to exit...")
+	os.pullEvent("key")
+	term.setTextColor(colors.white)
+end
 ]]></content>
 	<tabTrigger>function main</tabTrigger>
 	<scope>source.computercraft</scope>
