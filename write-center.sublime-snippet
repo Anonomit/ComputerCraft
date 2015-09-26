@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[local function writeCenter( text, nY )
+	<content><![CDATA[local function writeCenter(text, nY)
 	if type(text) == "table" then
 		for _, v in pairs(text) do
 			writeCenter(v)
@@ -7,7 +7,7 @@
 	else
 		local x, y = term.getCursorPos()
 		local w, h = term.getSize()
-		term.setCursorPos( w/2 - text:len()/2 + ( #text % 2 == 0 and 1 or 0 ), nY or y )
+		term.setCursorPos(w/2 - text:len()/2 + (#text % 2 == 0 and 1 or 0), nY or y)
 		print(text)
 	end
 end]]></content>
